@@ -2,7 +2,7 @@
 
 docker-composeの実行方法
 ```
-docker-compose up -d mysql
+$ docker-compose up -d mysql
 ```
 
 今回のデータベースの接続情報を設定する
