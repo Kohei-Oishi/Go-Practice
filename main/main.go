@@ -1,13 +1,16 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"Practice/ping"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	r.Run()
+	server := gin.Default()
+
+	//ping, pongの実装
+	server.GET("ping", ping.Ping)
+
+	//実行
+	server.Run()
 }
