@@ -11,6 +11,9 @@ func main() {
 	//ping, pongの実装
 	server.GET("ping", ping.Ping)
 
+	//userの実装
+	//server.POST("user/create", user.Createuser)
+
 	//実行
 	server.Run()
 }
