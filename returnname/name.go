@@ -1,7 +1,6 @@
 package returnname
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,7 +15,6 @@ func Retuenname(c *gin.Context)  {
 		c.JSON(400, gin.H{
 			"message" : "そんな奴存在しねぇよバーカ",
 		})
-		fmt.Fprint(err)
 		return
 	}
 	c.JSON(200, gin.H{
