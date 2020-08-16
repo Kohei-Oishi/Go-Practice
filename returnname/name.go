@@ -2,6 +2,7 @@ package returnname
 
 import (
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 type Human struct {
@@ -10,17 +11,14 @@ type Human struct {
 
 func Retuenname(c *gin.Context)  {
 	var name Human
-	err := c.BindJSON(&name)
+	err := c.ShouldBindJSON(&name)
 	if err != nil {
-		c.JSON(400, gin.H{
+		c.JSON(http.StatusBadRequest, gin.H{
 			"message" : "そんな奴存在しねぇよバーカ",
 		})
 		return
 	}
-	c.JSON(200, gin.H{
+	c.JSON(http.StatusOK, gin.H{
 		"Name" : name.Name,
-	})
-	c.JSON(400, gin.H{
-		"message" : "ごめんな、お前には用はないんや",
 	})
 }
