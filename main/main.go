@@ -17,6 +17,9 @@ func main() {
 	//名前を入れたら名前を返すものの実装
 	server.POST("/returnname", returnname.Retuenname)
 
+	//足し算の実装
+	server.POST("/sum", calculation.Sum)
+
 	//2乗計算の実装
 	server.POST("/square", calculation.Square)
 
