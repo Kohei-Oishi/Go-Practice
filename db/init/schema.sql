@@ -1,9 +1,0 @@
-CREATE SCHEMA IF NOT EXISTS `Go-Practice` DEFAULT CHARACTER SET utf8 ;
-USE `Go-Practice` ;
-
-CREATE TABLE IF NOT EXISTS `Go-Practice`. users (
-    number INT NOT NULL AUTO_INCREMENT,
-    id VARCHAR(32) NOT NULL,
-    name VARCHAR(32) NOT NULL,
-    PRIMARY KEY (id)
-);

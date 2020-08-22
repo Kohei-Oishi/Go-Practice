@@ -23,9 +23,6 @@ func main() {
 	//2乗計算の実装
 	server.POST("/square", calculation.Square)
 
-	//userの実装
-	//server.POST("user/create", user.Createuser)
-
 	//実行
 	server.Run()
 }
