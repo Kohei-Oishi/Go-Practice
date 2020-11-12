@@ -1,4 +1,4 @@
-version: "3"
+version: '3.3'
 
 volumes:
   data:
@@ -17,4 +17,7 @@ services:
       - ./db/init:/docker-entrypoint-initdb.d
       - ./db/data:/etc/mysql/conf.d
     environment:
-      MYSQL_ROOT_PASSWORD: "practice"
+      MYSQL_DATABASE: practice
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: practice
