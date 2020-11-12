@@ -16,4 +16,6 @@ services:
       - ./db/init:/docker-entrypoint-initdb.d
       - data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: "practice"
+      MYSQL_DATABASE: practice
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: practice
