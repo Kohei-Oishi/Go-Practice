@@ -1,8 +1,9 @@
 package calculation
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 type NumberRequest struct {
@@ -20,12 +21,13 @@ func Sum(c *gin.Context) {
 	err := c.ShouldBindJSON(&number)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"message" : "数字がなぁ、ちんこ",
+			"message": "数字がなぁ、ちんこ",
 		})
 		return
 	}
-	sumnum.Number = number.Number1 + number.Number2
+	sumnum.Number = Summer(number.Number1, number.Number2)
+	//sumnum.Number = number.Number1 + number.Number2
 	c.JSON(http.StatusOK, gin.H{
-		"SumNumber" : sumnum.Number,
+		"SumNumber": sumnum.Number,
 	})
 }
