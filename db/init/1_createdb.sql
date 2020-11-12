@@ -1,4 +1,10 @@
--- CREATE SCHEMA IF NOT EXISTS `practice` DEFAULT CHARACTER SET utf8 ;
--- USE `practice` ;
---
-CREATE DATABASE practice;
+# CREATE TABLE IF NOT EXISTS `practice`. users (
+CREATE SCHEMA IF NOT EXISTS `Practice` DEFAULT CHARACTER SET utf8 ;
+USE `Practice`;
+
+CREATE TABLE IF NOT EXISTS `Practice`. users (
+    number INT NOT NULL AUTO_INCREMENT UNIQUE,
+    id VARCHAR(32) NOT NULL,
+    name VARCHAR(32) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE = Innodb;
