@@ -7,4 +7,13 @@ CREATE TABLE IF NOT EXISTS `Practice`. users (
     id VARCHAR(32) NOT NULL,
     name VARCHAR(32) NOT NULL,
     PRIMARY KEY (id)
-) ENGINE = Innodb;
+) ENGINE = Innodb
+COMMENT = 'ユーザー';
+
+CREATE TABLE IF NOT EXISTS `Practice`. BeaconList (
+    uuid VARCHAR(32) NOT NULL,
+    major VARCHAR(32) NOT NULL,
+    minor VARCHAR(32) NOT NULL,
+    PRIMARY KEY (uuid)
+) ENGINE = Innodb
+    COMMENT = 'ユーザー';
