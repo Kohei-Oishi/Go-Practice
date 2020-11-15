@@ -16,4 +16,4 @@ CREATE TABLE IF NOT EXISTS `Practice`. BeaconList (
     minor VARCHAR(32) NOT NULL,
     PRIMARY KEY (uuid)
 ) ENGINE = Innodb
-    COMMENT = 'ユーザー';
+COMMENT = 'ビーコンの情報について';
