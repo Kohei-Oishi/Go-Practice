@@ -11,9 +11,9 @@ CREATE TABLE IF NOT EXISTS `Practice`. users (
 COMMENT = 'ユーザー';
 
 CREATE TABLE IF NOT EXISTS `Practice`. BeaconList (
-    uuid VARCHAR(32) NOT NULL,
+    uuid VARCHAR(64) NOT NULL,
     major VARCHAR(32) NOT NULL,
     minor VARCHAR(32) NOT NULL,
-    PRIMARY KEY (uuid)
+    PRIMARY KEY (major)
 ) ENGINE = Innodb
 COMMENT = 'ビーコンの情報について';
