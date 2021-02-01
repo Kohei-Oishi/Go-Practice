@@ -1,8 +1,8 @@
 # CREATE TABLE IF NOT EXISTS `practice`. users (
-CREATE SCHEMA IF NOT EXISTS `Practice` DEFAULT CHARACTER SET utf8 ;
-USE `Practice`;
+CREATE SCHEMA IF NOT EXISTS `go_practice` DEFAULT CHARACTER SET utf8 ;
+USE `go_practice`;
 
-CREATE TABLE IF NOT EXISTS `Practice`. users (
+CREATE TABLE IF NOT EXISTS `go_practice`. users (
     number INT NOT NULL AUTO_INCREMENT UNIQUE,
     id VARCHAR(32) NOT NULL,
     name VARCHAR(32) NOT NULL,
@@ -10,10 +10,9 @@ CREATE TABLE IF NOT EXISTS `Practice`. users (
 ) ENGINE = Innodb
 COMMENT = 'ユーザー';
 
-CREATE TABLE IF NOT EXISTS `Practice`. BeaconList (
-    uuid VARCHAR(64) NOT NULL,
+CREATE TABLE IF NOT EXISTS `go_practice`. BeaconList (
     major VARCHAR(32) NOT NULL,
-    minor VARCHAR(32) NOT NULL,
+    beacon_number INT NOT NULL,
     PRIMARY KEY (major)
 ) ENGINE = Innodb
 COMMENT = 'ビーコンの情報について';
