@@ -20,7 +20,7 @@ func Sum(c *gin.Context) {
 	err := c.ShouldBindJSON(&number)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"message" : "数字がなぁ、ちんこ",
+			"message" : "数字がなぁ",
 		})
 		return
 	}
